@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Helvetica;
+    background-color: rgb(59, 139, 113);
+  }
+
+  img {
+    border-radius: 50%;
+    border-width: 20px;
+    border: 5px solid rgb(22, 194, 30);
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    padding: 10px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .flex-container .ratingBox {
+    background-color: #bdbdbd;
+  }
+
+  .fill{
+      color: yellow;
+  }
+  .unfill{
+    color: #8f8f8f;
+  }
+  .class{
+      display: inline-block;
+  }

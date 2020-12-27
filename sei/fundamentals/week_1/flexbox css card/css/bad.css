@@ -1,0 +1,105 @@
+/* css reset */
+:root {
+    --accent-color: limegreen
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(15, 95, 96);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards{
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: center;
+}
+/* card****************************** */
+.card-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0 20px 0;
+}
+
+
+.card {
+    background: #ffffff;
+    border: 1px solid var(--accent-color);
+    position: relative;
+    width: 280px;
+    margin: 0 20px 10px;
+}
+.card-status{
+    position: absolute;
+    right: 22px;
+    top: 17px;
+}
+.card-img{
+    border-radius: 100px;
+    border: 6px solid var(--accent-color);
+    margin-bottom: 20px;
+    width: 130px;
+}
+.card-review{
+    background: #f3f3f3;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-star{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.fill{
+    color: #f0d456;
+}
+
+.unfill{
+    color: #cdcdcd;
+}
+
+.card-pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.card-discount{
+    margin-bottom: 10px;
+}
+.card-actions{
+    display: flex;
+
+}
+
+.card-button{
+    width: 50%;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.card-button_phone{
+    background-color: #66d189;
+}
+
+.card-button_chat{
+    background-color: #5abd7c;
+}

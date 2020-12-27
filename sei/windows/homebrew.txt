@@ -1,0 +1,35 @@
+https://docs.microsoft.com/en-us/windows/wsl/install-win10#simplified-installation-for-windows-insiders
+
+open powershell admin:
+    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart 
+powershell:
+    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart *//Windows logo key + R, type winver, Version 2004 or higher, with Build 19041
+download:
+restart:
+    https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+    run
+powershell:
+    wsl --set-default-version 2
+windows store:
+    get ubuntu
+
+
+make touch equivient
+function touch {if((Test-Path -Path ($args[0])) -eq $false) {Set-Content -Path ($args[0]) -Value ($null)} else {(Get-Item ($args[0])).LastWriteTime = Get-Date } }
+
+
+make trash equivient
+Function recycle
+{
+    Param(
+    [Parameter(Mandatory = $true,
+    ValueFromPipeline = $true)]
+    [alias('FullName')]
+    [string]$FilePath
+    )
+    Begin{$shell = New-Object -ComObject 'Shell.Application'}
+    Process{
+        $Item = Get-Item $FilePath
+$shell.namespace(0).ParseName($item.FullName).InvokeVerb('delete')
+    }
+}

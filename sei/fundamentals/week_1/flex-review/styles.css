@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h2 {
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #222;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+h1 {
+    color: rebeccapurple;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2104&q=80") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.hero p {
+    color: white;
+  }
+
+.title {
+    background-color: black;
+    width: 400px;
+    padding: 40px;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    /* margin: 100px 0 0 100px; */
+  }
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 40px;
+    min-height: 80vh;
+}
+article{
+    margin: 30px;
+    max-width: 300px;
+}
+
+.navlist {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navitem{
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid black;
+    cursor: pointer;
+    color: white;
+}
+
+.navitem a{
+    color: white;
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: black;
+    color: wheat;
+    font-size: 18px;
+    text-align: center;
+    padding: 40px 0;
+}
