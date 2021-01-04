@@ -6,8 +6,11 @@ var mongoose = require("mongoose");
 require("dotenv").config();
 var app = express();
 var port = process.env.PORT || 4000;
+import path from 'path'
+
 app.use(cors());
 app.use(express.json());
+
 var uri = "mongodb+srv://nic3point5:babybabybabybaby@cluster0.5epbs.mongodb.net/petRegistry?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 var connection = mongoose.connection;
@@ -47,16 +50,14 @@ const petSchema = new Schema({
 
 const petStats = mongoose.model('pet', petSchema)
 
-app.get('/', (req,res) =>{
-    // petStats.find({ Petname: 'Karby'})
-    // petStats.find({Petname: window.pet.name})
+app.get('/db', (req,res) =>{
     petStats.find()
         .then(petStatus => res.json(petStatus))
         .catch(err => res.status(400).json('Error: '+ err))
 
 })
 
-app.post('/',(req, res) => {
+app.post('/db',(req, res) => {
     const Petname = ''+req.body.Petname;
     const belly = +req.body.belly;
     const energy = +req.body.energy;
@@ -74,7 +75,7 @@ app.post('/',(req, res) => {
       .catch((err) => res.status(400).json("Error: " + err));
   });
 
-  app.post('/:id',(req, res) => {
+  app.post('/db/:id',(req, res) => {
     petStats.findById(req.params.id)
         .then(pet=>{
             pet.Petname= ''+req.body.Petname
@@ -90,12 +91,19 @@ app.post('/',(req, res) => {
 
   });
 
-  app.delete('/:id',(req,res) => {
+  app.delete('/db/:id',(req,res) => {
     petStats.findByIdAndDelete(req.params.id)
         .then(() => res.json('Pet deleted'))
         .catch(err => res.status(400).json('Error: '+ err))
 })
 
-if(process.env.NODE-ENV){
-    
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'))
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname+'/client/build/index.html'));
+      })
 }
+app.use(express.static('client/build'))
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+  })
