@@ -1,0 +1,35 @@
+<%# We have access to the fruit object below %> <%# { name: 'Apple', color:
+'Red', readToEat: 'true' } %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Show Fruit</h1>
+
+    <h4><%= fruit.name %></h4>
+
+    <p>The <%= fruit.name %> is <%= fruit.color %></p>
+    
+    <% if (fruit.readyToEat) { %>
+      <p>It is ready to eat</p>
+    <% } else {  %>
+      <p>It is not ready to eat</p>
+    <% } %>
+
+    <div>
+      <a href="/fruits/<%= index %>/edit">
+        <button>Edit</button>
+      </a>
+    </div>
+
+
+  </body>
+</html>
+
+<%# EJS OUTPUT TAG %> <%= 'js here' %>
+<%# EJS RUN JS ONLY TAG %> <% 'js here' %>
