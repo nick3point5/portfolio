@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="pokemon">
+        <% for(i=0; i < pokemon.length;i++){ %>
+            <li class="single"><a href="<%= i %>"><%= pokemon[i].name %></a></li>
+
+                <a id='edit' href="/pokemon/<%= i %>/edit">Edit</a>
+                <form method="POST" action="/pokemon/<%= i %>?_method=DELETE">
+                    <button type="submit">Delete</button>
+                </form>      
+
+        <% } %> 
+    </ul>
+    <a id='catch' href="../catch">Catch Pokemon</a>
+</body>
+</html>

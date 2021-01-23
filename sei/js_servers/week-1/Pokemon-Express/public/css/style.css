@@ -1,0 +1,26 @@
+@font-face {
+    font-family: pokemon;
+    src: url(Pokemon.ttf);
+  }
+
+.single, .single a{
+    font-family: pokemon;
+    color: yellow;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: blue;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    
+
+}
+
+li a {
+    list-style: none;
+    position: relative;
+    left: 10px;
+}
+
+
+ul li::marker {
+    content: url(pokeball.png);
+  }

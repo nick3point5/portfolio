@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Store</title>
+</head>
+<body>
+    <ul>
+        <% for(i=0;i<aisle.length;i++){ %>
+            <li>
+                <a href="<%= aisle[i]._id %> ">
+                    <%= aisle[i].name %> 
+                </a>
+            </li>
+        <% } %>  
+    </ul>
+    <a href="new">New</a>
+</body>
+</html>

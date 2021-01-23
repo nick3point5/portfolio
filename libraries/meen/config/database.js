@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const connectionString = 'mongodb+srv://nick3point5:Nch5ZgteIRb8@default.atumn.mongodb.net/test?retryWrites=true&w=majority';
+const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/test';
 mongoose.connect(connectionString, { 
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -15,3 +15,5 @@ mongoose.connection.on('error', (err) => {
 mongoose.connection.on('disconnected', () => {
     console.log('Mongoose disconnected');
 });
+
+module.exports = {Model: require('../models/model')} 

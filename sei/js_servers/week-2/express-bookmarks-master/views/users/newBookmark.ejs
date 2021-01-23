@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Bookmark</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/users/new">Signup</a></li>
+        <li><a href="/users/login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Add New Bookmark</h1>
+
+
+    <form action="/users/<%= userId %>/bookmarks" method="POST">
+    
+      <div>
+        <label for="name">Title</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+
+      <div>
+        <label for="url">URL</label>
+        <input type="text" id="url" name="url">
+      </div>
+
+      <button type="submit">Add Bookmark</button>
+      
+    </form>
+
+  </main>
+
+  <footer>
+    &copy; <%= new Date().getFullYear() %> Acme Inc.
+  </footer>
+</body>
+</html>

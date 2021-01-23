@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Page For <%= authorData.name %></title>
+</head>
+<body>
+  <%- include('../partials/header') %>
+  
+  <main>
+    <section>
+      <h2>Author Attributes</h2>
+
+      <ul>
+        <li>
+          Name: <%= authorData.name %>
+        </li>
+        <li>
+          Created On: <%= authorData.createdAt %>
+        </li>
+      </ul>
+
+      <form action="/authors/<%= authorData._id %>?_method=DELETE" method="POST">
+
+        <button type="submit">Delete</button>
+
+      </form>
+
+      <a href="/authors/<%= authorData._id %>/edit">
+        <button>Edit</button>
+      </a>
+
+      <ul>
+        <% authorData.articles.forEach((article) => { %>
+          <a href="/articles/<%= article._id %>">
+            <li><%= article.title %></li>
+          </a>
+        <% }) %>
+      </ul>
+
+    </section>
+  </main>
+
+</body>
+</html>

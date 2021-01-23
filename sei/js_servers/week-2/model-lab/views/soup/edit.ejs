@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Store</title>
+</head>
+<body>
+    <form action="/index/<%= soup._id %>?_method=PUT" method="post">
+        <h2>Name:</h2>
+        <input name="name" type="text" value="<%= soup.name %>">
+        <h2>Price:</h2>
+        <input name="price" type="number" value="<%= soup.price %>">
+        <h2>Qty:</h2>
+        <input name="qty" type="number" value="<%= soup.qty %>">
+
+        <button type="submit">Update</button>
+    </form>
+
+</body>
+</html>

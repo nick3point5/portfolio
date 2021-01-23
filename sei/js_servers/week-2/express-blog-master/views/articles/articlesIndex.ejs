@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles</title>
+</head>
+<body>
+  <%- include('../partials/header') %>
+  
+  <main>
+    <h2>List of Articles</h2>
+
+    <%#
+      Iterate the articlesData array, and for each article create a list item with the article name
+    %>
+    <ul>
+
+      <% for (let i = 0; i < articlesData.length; i++) { %>
+        <li>
+          <a href="/articles/<%= articlesData[i]._id %>">
+            <%= articlesData[i].title %>
+          </a>
+        </li>
+      <% } %>
+
+    </ul>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+[submodule "deliverables/js_servers/express-space-homework"]
+	path = deliverables/js_servers/express-space-homework
+	url = https://git.generalassemb.ly/kennytrinh/express-space-homework
+[submodule "deliverables/js_servers/first-full-stack-homework"]
+	path = deliverables/js_servers/first-full-stack-homework
+	url = https://git.generalassemb.ly/kennytrinh/first-full-stack-homework
+[submodule "deliverables/js_servers/mongoose-vampires-hw"]
+	path = deliverables/js_servers/mongoose-vampires-hw
+	url = https://git.generalassemb.ly/kennytrinh/mongoose-vampires-hw
+[submodule "deliverables/projects/fighter"]
+	path = deliverables/projects/fighter
+	url = https://git.generalassemb.ly/kennytrinh/fighter
+[submodule "sei/js_servers/week-1/bonus/extra-unit-2-challenges"]
+	path = sei/js_servers/week-1/bonus/extra-unit-2-challenges
+	url = https://git.generalassemb.ly/kennytrinh/extra-unit-2-challenges

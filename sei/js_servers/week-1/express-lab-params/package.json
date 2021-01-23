@@ -1,0 +1,21 @@
+{
+  "name": "express-lab-params",
+  "version": "1.0.0",
+  "description": "* Practice setting up express applications.\r * Practice creating custom routes.\r * Practice using parameters from a request.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/WC-SEIR-1207/express-lab-params.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "keywords": []
+}

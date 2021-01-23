@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Store</title>
+</head>
+<body>
+    <form action="/index/<% soup._id %>" method="post">
+        <h2>Name:</h2>
+        <input name="name" type="text">
+        <h2>Ingredients:</h2>
+        <input name="ingredients" type="text">
+
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>
+
+<% console.log(soup) %> 

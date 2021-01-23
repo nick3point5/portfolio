@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <form method="POST" action="/index/<%= thing.id %>?_method=PUT">
+        <h2>Name</h2>
+        <input id="name" name="name" type="text" value=<%= thing.name %> >
+        <h2>Arms</h2>
+        <input id="arms" name="arms" type="number" value=<%= thing.arms %> >
+        <h2>Fingers</h2>
+        <input id="fingers" name="fingers" type="number" value=<%= thing.fingers %> >
+        <h2>Legs</h2>
+        <input id="legs" name="legs" type="number" value=<%= thing.legs %> >
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

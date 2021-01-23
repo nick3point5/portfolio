@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    <form action="/products" method="post">
+        <h2>Name</h2>
+        <input type="text" name="name">
+        <h2>Price</h2>
+        <input type="number" name="price">
+        <h2>Image URL</h2>
+        <input type="text" name="url">
+        <button type="submit">Post New</button>
+    </form>
+    <ul>
+
+        <% for(i=0;i<products.length;i++){ %>
+        
+            <li><%= products[i].name %> <%= products[i].price %></li>
+            <img src="<%= products[i].img %>" alt="">
+            
+        <% } %>  
+
+    </ul>
+</body>
+</html>
