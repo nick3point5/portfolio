@@ -14,4 +14,6 @@
 	path = sei/js_servers/week-1/bonus/extra-unit-2-challenges
 	url = https://git.generalassemb.ly/kennytrinh/extra-unit-2-challenges
 [submodule "./sei/python_django/python-control-flow-lab/python-control-flow-lab"]
-	url = https://git.generalassemb.ly/kennytrinh/python-koans.git
+	url = https://git.generalassemb.ly/kennytrinh/python-control-flow-lab.git
+[submodule "./sei/python_django/python-koans"]
+	url = https://git.generalassemb.ly/kennytrinh/python-koans
