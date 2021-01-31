@@ -8,7 +8,7 @@ const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
-app.use(express.static(__dirname+'/public'))
+app.use('/portfolio',express.static(__dirname+'/public'))
 app.set('view engine', 'ejs')
 const PORT = process.env.PORT || 3000
 

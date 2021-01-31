@@ -1,23 +1,37 @@
+@import url(//db.onlinewebfonts.com/c/9ae5e19516bc6428f1327ff3311b2617?family=DINNextW01-Light);
+@font-face {font-family: "DINNextW01-Light"; src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot"); src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff") format("woff"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.svg#DINNextW01-Light") format("svg");     
+    font-family: 'Avenir';
+    src:local(Avenir_LT_35_Light.ttf);}
+
 :root {
-    --color_select: #ee3446;
+    --color_accent: #ee3546;
     --color_inactive: #444444;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 p{
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
-span {
-    font-family: din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif
-}
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+a{
+    text-decoration: none;
 }
 .flex-r{
     display: flex;
@@ -56,20 +70,23 @@ nav{
     object-fit: cover;
 }
 .nav-link{
-    font-family: sans-serif;
+    font-family: DINNextW01-Light, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
     color: var(--color_inactive);
-    padding: 0 10px;
+    padding: 0 25px 0 50px;
     text-align: center;
     line-height: 29px;
     cursor: pointer;
+    margin-top: auto;
 }
 .nav-link:hover {
-    color: var(--color_select);
+    color: var(--color_accent);
     transition: color .4s ease 0s;
 }
 
 .selected{
-    color: var(--color_select)
+    color: var(--color_accent)
 }
 
 /* hiro */
@@ -89,23 +106,122 @@ nav{
     width: 333px;
     background-color: #fff;
     box-shadow: 0 1px 4px rgba(0,0,0,.6);
+    animation-name: about-in;
+    animation-duration: 1s;
 }
 
+@keyframes about-in{
+
+        0% {
+            transform: translate(15%,-50%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translate(0%,-50%);
+            opacity: 1;
+        }
+}
+
+
 .about-short-content{
-    margin: 60px 25px 35px 35px;
+    margin: 60px 0 0 35px;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.job{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color_accent)
+}
+
+.me-blurb{
+    font-size: 15px;
+    width: 200px;
+    margin-bottom: 24px;
+}
+.about-short-btns-container{
+    height: 40px;
+}
+.contact-btn{
+    color: #fff;
+    border: var(--color_accent) solid 1px;
+    background-color: var(--color_accent);
+    height: 40px;
+    width: 142px;
+    padding: 15px 21px;
+    margin-right: 5px;
+}
+
+.contact-btn:hover{
+    border: #000 solid 1px;
+    color: #000;
+    background-color: #fff;
+    transition : color 0.4s ease 0s
+}
+
+
+.to-project-btn{
+    height: 50px;
+    width: 120px;
+    padding: 15px 10px;
+}
+
+.view-btn{
+    padding: 15px 10px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border: #000 solid 1px;
+}
+.view-btn:hover{
+    border: #fff solid 1px;
+    filter: invert();
+    -webkit-transition : -webkit-filter 200ms linear;
 }
 
 .btn{
-    border: solid 2px #000;
     align-items: center;
+    cursor: pointer;
 }
 
 /* projects */
+.project-img{
+    height: 300px;
+    object-fit: contain;
+}
+
+.header, .project-title{
+    font-family: DINNextW01-Light, sans-serif;
+    font-weight: 700;
+}
+
+.header{
+    font-size: 40px;
+}
+
+.project-title{
+    font-size: 25px;
+}
+
+.project-subtitle{
+    font-weight: 700;
+    size: 15px;
+    margin-bottom: 20px;
+}
+
+.project-blurb{
+    size: 17px;
+}
 
 .project-container{
     position: relative;
     width: 280px;
-    height: 500px;
+    height: 530px;
     margin: 25px;
 }
 
@@ -113,6 +229,30 @@ nav{
     margin: 0px;
     position: absolute;
     bottom: 0%;
+    color: #fff;
+    padding: 15px 40px;
+    
+}
+.view-study:hover{
+    border: #000 solid 1px;
+    color: #000;
+    background-color: #fff;
+    transition: color .4s ease 0s;
+}
+
+.view-study1{
+    border: #43BCCD solid 1px;
+    background-color: #43BCCD;
+}
+
+.view-study2{
+    border: #EA3546 solid 1px;
+    background-color: #EA3546;
+}
+
+.view-study3{
+    border: #F9C80E solid 1px;
+    background-color: #F9C80E;
 }
 
 /* About Me */
@@ -127,25 +267,133 @@ nav{
     text-align: justify;
     text-justify: inter-word;
 }
+.about-info{
+    size: 17px;
+    font-family: DINNextW01-Light, sans-serif;
+}
 
 .about-long{
-    margin: 25px 50px 25px 0;
+    margin: 25px 50px 0 0;
+}
+
+.skill-header, .tools-header{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+
+.skills{
+    list-style-type:none
+}
+
+.icon{
+    margin-right: 40px;
+}
+
+/* contact */
+.contact{
+    margin-top: 100px;
+    justify-content: space-around;
+}
+
+.pencil-img{
+    width: 370px;
+    height: 370px;
+}
+
+.contact-form{
+    padding: 50px;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.6);
+    height: 450px;
+    width: 370px;
+}
+
+.input-label, .form-input{
+    font-family: 'Avenir';
+    size: 14px;
+    font-weight: 700;
+}
+
+.input-label{
+    margin-top: 30px;
+}
+
+.form-input{
+    padding-left: 1em;
+    font-weight: 400;
+    height: 35px;
+}
+
+.input-message{
+    height: 100px;
+    line-height: 20px;
+    padding-top: .75em;
+}
+
+.submit-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.form-submit{
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    background-color: #EA3546;
+    height: 40px;
+    width: 90px;
+    border: none;
+}
+
+.form-submit:hover{
+    background-color: #e8e6e6;
+    transition: background-color 0.4s ease-out 0s;
 }
 
 /* footer */
 .footer{
-    justify-content: space-between;
+    margin: 50px 0 20px 0;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.copyright{
+    font-size: 14px;
+}
+
 .footer a{
     color: #000;
-    text-decoration: none;
+    font-size: 17px;
+    margin: 0 20px;
 }
+
+.footer a:hover{
+    opacity: 0.6;
+    transition: opacity 0.4s ease-out 0s;
+}
+
 .fa-linkedin{
     color: #0077B5;
 }
 
 /* mobile mode*/
 @media only screen and (max-width: 1000px) {
+    .main-section{
+        overflow: hidden;
+    }
+    .logo-container{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        width: 80px;
+        height: 80px; 
+        object-fit: cover;
+
+    }
     .header{
         text-align: center;
     }
@@ -160,6 +408,8 @@ nav{
     }
     .main-section{
         position: relative;
+        display: flex;
+        flex-direction: column;
         width: 100%;
     }
     .about-short-container{
@@ -176,5 +426,66 @@ nav{
     .projects-container{
         flex-direction: column;
         align-items: center;
+    }
+
+    .view-study{
+        position: relative;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .about-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-long, .tools-icons{
+        margin: 25px 40px 0 40px;
+    }
+
+    .about-me-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .tools-icons{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .icon{
+        margin: 20px 10px 20px 10px;
+    }
+    
+    .view-btn{
+        display: none;
+    }
+
+    .nav-link{
+        display: none;
+    }
+
+    .contact-form{
+        box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.6);
+        height: 450px;
+        width: 90vw;
+        padding: 5vw;
+    }
+
+    .form-submit{
+        font-family: 'Montserrat', sans-serif;
+        color: #000;
+        background-color: #EA3546;
+        height: 40px;
+        border: none;
+    }
+    
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer a{
+        margin-bottom: 25px;
     }
 }
