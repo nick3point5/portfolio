@@ -1,7 +1,11 @@
+import routes from './config/routes';
+import Header from './components/Header';
+
 function App() {
   return (
     <div className="container">
-      <h1>Hello World</h1>
+      <Header/>
+      { routes }
     </div>
   );
 }
