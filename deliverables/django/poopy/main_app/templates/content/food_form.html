@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" enctype="multipart/form-data" method="post" autocomplete="off">
+        {% csrf_token %}
+            <label>Name</label>
+            {{form.name}}
+            <label>Notes</label>
+            {{ form.note }}
+
+        <input type="file" name="photo-file">
+        <br><br>
+
+        <input type="submit" class="btn" value="Log Food">
+    </form>
+{% endblock content %}

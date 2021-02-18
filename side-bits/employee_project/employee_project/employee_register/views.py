@@ -14,6 +14,7 @@ def employee_form(request, id=0):
     if request.method == "GET":
         if id == 0:
             form = EmployeeForm()
+            print(form)
         else:
             employee = Employee.objects.get(pk=id)
             form = EmployeeForm(instance=employee)
