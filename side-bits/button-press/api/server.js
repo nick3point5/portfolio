@@ -12,6 +12,6 @@ app.use('/',routes.main)
 
 app.listen(PORT, ()=>{
 console.log(
-  `Server running in port ${PORT} \nlocal: http://192.168.56.1:${PORT}`
+  `Server running in port ${PORT} \nlocal: http://localhost:${PORT}`
 );
 })
