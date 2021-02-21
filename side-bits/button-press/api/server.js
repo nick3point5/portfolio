@@ -8,9 +8,7 @@ const routes = require('./routes')
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/', (req,res) => {
-  res.send('Hi')
-})
+app.use('/',routes.main)
 
 app.listen(PORT, ()=>{
 console.log(
